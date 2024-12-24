@@ -1,0 +1,177 @@
+clone:
+  depth: full
+
+pipelines:
+  branches:
+    "virtual_loop":
+      - parallel:
+          - step:
+              image: ubuntu:18.04
+              name: Build-x86
+              script:
+                - uname -a
+                - bash ./build_in_docker.sh x86 "$BITBUCKET_TAG_$(date +%Y%m%d)_x86"
+              artifacts:
+                - dist/**
+          - step:
+              image: ubuntu:18.04
+              name: Build-arm
+              runs-on:
+                - self.hosted
+                - linux.arm64
+                - vl
+              script:
+                - uname -a
+                - bash ./build_in_docker.sh arm "$BITBUCKET_TAG_$(date +%Y%m%d)_arm"
+              artifacts:
+                - dist/**
+  tags:  #  beacause"Seyond_*_Installer_*,OM_*_Installer_*"  does not work . gpt4-o cheating,  see: https://support.atlassian.com/bitbucket-cloud/docs/use-glob-patterns-on-the-pipelines-yaml-file/
+    "Seyond_*_Installer_*":
+      - parallel:
+          - step:
+              image: ubuntu:18.04
+              name: Build-x86
+              script:
+                - uname -a
+                - bash ./build_in_docker.sh x86 "${BITBUCKET_TAG}_$(date +%Y%m%d)_x86"
+                - echo 'tag name:' $BITBUCKET_TAG
+                - export RELEASE_NAME="${BITBUCKET_TAG}_$(date +%Y%m%d)_x86"
+                - tar -czf $RELEASE_NAME'.tgz' -C ./dist .
+                - |
+                  if [[ -n $RELEASE_NAME'.tgz' ]] || [[ -n $RELEASE_NAME'.tgz' ]]; then
+                      echo "Confirm tgz file exist, start upload to page, pageId is 1975289293 "
+                      USER_NAME=longbin.liu@cn.innovusion.com
+                      TOKEN=ATATT3xFfGF02iI2JXAnJkdrtr3Rl93QZA7IymLyPqNL4rD_a1c3NSOeuAGAuetJG-9aNwp53rDaM086cNkL-87zuJh7amEO976m5oeRteoiem8BIi762wW9e1eWzxFCiqEecKZwedy8M5oysdmlWAizc2BpRWjoL6ckAoj0UCtkqsp-2gUNAK0=CF0B9276
+                      CONFLUENCE_BASE_URL=https://innovusioncn.atlassian.net/wiki
+                      # PAGE_ID=1481802299
+                      PAGE_ID=1975289293
+                      # COMMENT=$(git log --pretty="%s" $(echo $(git for-each-ref refs/tags --sort=-taggerdate --format="%(refname:short)" --count=2) | sed "s/ /.../g"))
+                      ATTACHMENT_FILE_NAME=$RELEASE_NAME'.tgz'
+                      curl -u ${USER_NAME}:${TOKEN} -X PUT -H "X-Atlassian-Token: no-check" -F "file=@${ATTACHMENT_FILE_NAME}" "${CONFLUENCE_BASE_URL}/rest/api/content/${PAGE_ID}/child/attachment"
+                  fi
+              artifacts:
+                - dist/**
+
+          - step:
+              image: ubuntu:18.04
+              name: Build-arm
+              runs-on:
+                - self.hosted
+                - linux.arm64
+                - vl
+              script:
+                - uname -a
+                - bash ./build_in_docker.sh arm "${BITBUCKET_TAG}_$(date +%Y%m%d)_arm"
+                - echo 'tag name:' $BITBUCKET_TAG
+                - export RELEASE_NAME="${BITBUCKET_TAG}_$(date +%Y%m%d)_arm"
+                - tar -czf $RELEASE_NAME'.tgz'  -C ./dist .
+                - |
+                  if [[ -n $RELEASE_NAME'.tgz' ]] || [[ -n $RELEASE_NAME'.tgz' ]]; then
+                      echo "Confirm tgz file exist, start upload to page, pageId is 1975289293 "
+                      USER_NAME=longbin.liu@cn.innovusion.com
+                      TOKEN=ATATT3xFfGF02iI2JXAnJkdrtr3Rl93QZA7IymLyPqNL4rD_a1c3NSOeuAGAuetJG-9aNwp53rDaM086cNkL-87zuJh7amEO976m5oeRteoiem8BIi762wW9e1eWzxFCiqEecKZwedy8M5oysdmlWAizc2BpRWjoL6ckAoj0UCtkqsp-2gUNAK0=CF0B9276
+                      CONFLUENCE_BASE_URL=https://innovusioncn.atlassian.net/wiki
+                      # PAGE_ID=1481802299
+                      PAGE_ID=1975289293
+                      # COMMENT=$(git log --pretty="%s" $(echo $(git for-each-ref refs/tags --sort=-taggerdate --format="%(refname:short)" --count=2) | sed "s/ /.../g"))
+                      ATTACHMENT_FILE_NAME=$RELEASE_NAME'.tgz'
+                      curl -u ${USER_NAME}:${TOKEN} -X PUT -H "X-Atlassian-Token: no-check" -F "file=@${ATTACHMENT_FILE_NAME}" "${CONFLUENCE_BASE_URL}/rest/api/content/${PAGE_ID}/child/attachment"
+                  fi
+              artifacts:
+                - dist/**
+    "OM_*_Installer_*":
+      - parallel:
+          - step:
+              image: ubuntu:18.04
+              name: Build-x86
+              script:
+                - uname -a
+                - bash ./build_in_docker.sh x86 "${BITBUCKET_TAG}_$(date +%Y%m%d)_x86"
+                - echo 'tag name:' $BITBUCKET_TAG
+                - export RELEASE_NAME="${BITBUCKET_TAG}_$(date +%Y%m%d)_x86"
+                - tar -czf $RELEASE_NAME'.tgz' -C ./dist .
+                - |
+                  if [[ -n $RELEASE_NAME'.tgz' ]] || [[ -n $RELEASE_NAME'.tgz' ]]; then
+                      echo "Confirm tgz file exist, start upload to page, pageId is 1975289293 "
+                      USER_NAME=longbin.liu@cn.innovusion.com
+                      TOKEN=ATATT3xFfGF02iI2JXAnJkdrtr3Rl93QZA7IymLyPqNL4rD_a1c3NSOeuAGAuetJG-9aNwp53rDaM086cNkL-87zuJh7amEO976m5oeRteoiem8BIi762wW9e1eWzxFCiqEecKZwedy8M5oysdmlWAizc2BpRWjoL6ckAoj0UCtkqsp-2gUNAK0=CF0B9276
+                      CONFLUENCE_BASE_URL=https://innovusioncn.atlassian.net/wiki
+                      # PAGE_ID=1481802299
+                      PAGE_ID=1975289293
+                      # COMMENT=$(git log --pretty="%s" $(echo $(git for-each-ref refs/tags --sort=-taggerdate --format="%(refname:short)" --count=2) | sed "s/ /.../g"))
+                      ATTACHMENT_FILE_NAME=$RELEASE_NAME'.tgz'
+                      curl -u ${USER_NAME}:${TOKEN} -X PUT -H "X-Atlassian-Token: no-check" -F "file=@${ATTACHMENT_FILE_NAME}" "${CONFLUENCE_BASE_URL}/rest/api/content/${PAGE_ID}/child/attachment"
+                  fi
+              artifacts:
+                - dist/**
+
+          - step:
+              image: ubuntu:18.04
+              name: Build-arm
+              runs-on:
+                - self.hosted
+                - linux.arm64
+                - vl
+              script:
+                - uname -a
+                - bash ./build_in_docker.sh arm "${BITBUCKET_TAG}_$(date +%Y%m%d)_arm"
+                - echo 'tag name:' $BITBUCKET_TAG
+                - export RELEASE_NAME="${BITBUCKET_TAG}_$(date +%Y%m%d)_arm"
+                - tar -czf $RELEASE_NAME'.tgz'  -C ./dist .
+                - |
+                  if [[ -n $RELEASE_NAME'.tgz' ]] || [[ -n $RELEASE_NAME'.tgz' ]]; then
+                      echo "Confirm tgz file exist, start upload to page, pageId is 1975289293 "
+                      USER_NAME=longbin.liu@cn.innovusion.com
+                      TOKEN=ATATT3xFfGF02iI2JXAnJkdrtr3Rl93QZA7IymLyPqNL4rD_a1c3NSOeuAGAuetJG-9aNwp53rDaM086cNkL-87zuJh7amEO976m5oeRteoiem8BIi762wW9e1eWzxFCiqEecKZwedy8M5oysdmlWAizc2BpRWjoL6ckAoj0UCtkqsp-2gUNAK0=CF0B9276
+                      CONFLUENCE_BASE_URL=https://innovusioncn.atlassian.net/wiki
+                      # PAGE_ID=1481802299
+                      PAGE_ID=1975289293
+                      # COMMENT=$(git log --pretty="%s" $(echo $(git for-each-ref refs/tags --sort=-taggerdate --format="%(refname:short)" --count=2) | sed "s/ /.../g"))
+                      ATTACHMENT_FILE_NAME=$RELEASE_NAME'.tgz'
+                      curl -u ${USER_NAME}:${TOKEN} -X PUT -H "X-Atlassian-Token: no-check" -F "file=@${ATTACHMENT_FILE_NAME}" "${CONFLUENCE_BASE_URL}/rest/api/content/${PAGE_ID}/child/attachment"
+                  fi
+              artifacts:
+                - dist/**
+
+    "AWS_Virtual_Loop_Installer*": # 对所有tags执行以下步骤
+      - parallel:
+          - step:
+              image: ubuntu:18.04
+              name: Build-x86
+              script:
+                - uname -a
+                - bash ./build_in_docker.sh x86 "${BITBUCKET_TAG}_$(date +%Y%m%d)_x86"
+                - source /root/.bashrc && conda activate qt && conda install -y boto3
+                - echo 'tag name:' $BITBUCKET_TAG
+                - export RELEASE_NAME="${BITBUCKET_TAG}_$(date +%Y%m%d)_x86"
+                - tar -czf $RELEASE_NAME'.tgz' -C ./dist .
+                - |
+                  if [[ -n $RELEASE_NAME'.tgz' ]] || [[ -n $RELEASE_NAME'.tgz' ]]; then
+                      # upload to AWS
+                      python3 ./s3_upload.py --bucket iv-release --artifact $RELEASE_NAME'.tgz' --bucket_key perception/virtualloop/Installer/
+                  fi
+
+              artifacts:
+                - dist/**
+
+          - step:
+              image: ubuntu:18.04
+              name: Build-arm
+              runs-on:
+                - self.hosted
+                - linux.arm64
+                - vl
+              script:
+                - uname -a
+                - bash ./build_in_docker.sh arm "${BITBUCKET_TAG}_$(date +%Y%m%d)_arm"
+                - source /root/.bashrc && conda activate qt && conda install -y boto3
+                - echo 'tag name:' $BITBUCKET_TAG
+                - export RELEASE_NAME="${BITBUCKET_TAG}_$(date +%Y%m%d)_arm"
+                - tar -czf $RELEASE_NAME'.tgz'  -C ./dist .
+                - |
+                  if [[ -n $RELEASE_NAME'.tgz' ]] || [[ -n $RELEASE_NAME'.tgz' ]]; then
+                      # upload to AWS
+                      python3 ./s3_upload.py --bucket iv-release --artifact $RELEASE_NAME'.tgz' --bucket_key perception/virtualloop/Installer/
+                  fi
+              artifacts:
+                - dist/**

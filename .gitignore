@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+/common/__pycache__/
+/handler/__pycache__
+/dist
+/build
+/test
+/env/miniconda.sh
+/env/Miniconda3-latest-Linux-aarch64.sh
+*spec

@@ -1,0 +1,5 @@
+mkdir -p  /root/miniconda3
+bash  /work/env/miniconda.sh -b -u -p /root/miniconda3
+/root/miniconda3/bin/conda init bash && source /root/.bashrc && conda env create -f /work/env/env_x86.yml
+source /root/.bashrc && conda activate qt && apt update && DEBIAN_FRONTEND=noninteractive apt-get install -y libglib2.0-0  binutils libgl1-mesa-glx binutils
+source /root/.bashrc && conda activate qt && cd /work/ && bash build.sh

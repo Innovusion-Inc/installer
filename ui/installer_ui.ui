@@ -1,0 +1,1515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>954</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stepStack">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>808</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="ipSelect">
+     <widget class="QLabel" name="miniLogoPicIS">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>132</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>94</y>
+        <width>571</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Please select an IP address for the software. </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>342</y>
+        <width>751</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#E24183;</string>
+      </property>
+      <property name="text">
+       <string>Note: Ensure that the selected IP is in the same subnet as the Lidar IP!</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="okPicIS">
+      <property name="geometry">
+       <rect>
+        <x>735</x>
+        <y>420</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cancelBtnIS">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>407</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;</string>
+      </property>
+      <property name="text">
+       <string>Cancel     </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="okBtnIS">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>407</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;</string>
+      </property>
+      <property name="text">
+       <string>Next     </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cancelPicIS">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>420</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="ethernetListPage">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>140</y>
+        <width>791</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="three">
+       <widget class="QPushButton" name="en2Select">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>140</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:white;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="en0Select">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>15</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:white;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="en1Select">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>78</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:white;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="en0IP">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>233</x>
+          <y>15</y>
+          <width>412</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#f0f0f0;border:1px solid #3bdbbf;border-radius: 5px;color:black;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="en1IP">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>233</x>
+          <y>78</y>
+          <width>412</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:black;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="en2IP">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>233</x>
+          <y>139</y>
+          <width>412</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:black;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="en1Label">
+        <property name="geometry">
+         <rect>
+          <x>32</x>
+          <y>78</y>
+          <width>180</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ethernet(eth1) :</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="en2Label">
+        <property name="geometry">
+         <rect>
+          <x>32</x>
+          <y>141</y>
+          <width>180</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ethernet(eth1) :</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="en0Label">
+        <property name="geometry">
+         <rect>
+          <x>32</x>
+          <y>15</y>
+          <width>180</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ethernet(eth0) :</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="two">
+       <widget class="QPushButton" name="en0Select_2">
+        <property name="geometry">
+         <rect>
+          <x>669</x>
+          <y>40</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:white;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="en1Select_2">
+        <property name="geometry">
+         <rect>
+          <x>669</x>
+          <y>120</y>
+          <width>36</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:white;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="en0IP_2">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>233</x>
+          <y>40</y>
+          <width>412</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#f0f0f0;border:1px solid #3bdbbf;border-radius: 5px;color:black;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="en1IP_2">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>233</x>
+          <y>120</y>
+          <width>412</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:black;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="en1Label_2">
+        <property name="geometry">
+         <rect>
+          <x>32</x>
+          <y>120</y>
+          <width>180</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ethernet(eth1) :</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="en0Label_2">
+        <property name="geometry">
+         <rect>
+          <x>32</x>
+          <y>40</y>
+          <width>180</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ethernet(eth0) :</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="four">
+       <widget class="QScrollArea" name="enList">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>-10</y>
+          <width>751</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QScrollArea {
+                border: none;
+                background-color: white;
+            }
+QScrollBar:vertical {
+                border: none;
+                background: white;
+                width: 14px;
+            }
+     QScrollBar::handle:vertical {        
+        background-color: #f0f0f0;
+        min-height: 20px;
+        border-radius: 5px;
+     }
+     QScrollBar::add-line:vertical {
+        height: 0px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+     }
+     QScrollBar::sub-line:vertical {
+        height: 0 px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+     }</string>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>751</width>
+           <height>201</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <zorder>ethernetListPage</zorder>
+     <zorder>miniLogoPicIS</zorder>
+     <zorder>label_3</zorder>
+     <zorder>label_6</zorder>
+     <zorder>cancelBtnIS</zorder>
+     <zorder>okBtnIS</zorder>
+     <zorder>okPicIS</zorder>
+     <zorder>cancelPicIS</zorder>
+    </widget>
+    <widget class="QWidget" name="ipConfirm">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>94</y>
+        <width>731</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Please ensure that the server IP and Lidar IP are within the same subnet.</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="miniLogoPicIC">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>132</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>209</y>
+        <width>161</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>The server IP:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ipIC">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>209</y>
+        <width>560</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#f0f0f0;border:1px solid grey;border-radius: 5px;color:black;
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tipLabelIC">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>300</y>
+        <width>731</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#E24183;</string>
+      </property>
+      <property name="text">
+       <string>(If IP's are not matching, please change the server IP address before installing the software.)</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cancelPicIC">
+      <property name="geometry">
+       <rect>
+        <x>605</x>
+        <y>420</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="okPicIC">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>420</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cancelBtnIC">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>515</x>
+        <y>407</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;</string>
+      </property>
+      <property name="text">
+       <string>Cancel     </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="okBtnIC">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>645</x>
+        <y>407</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;</string>
+      </property>
+      <property name="text">
+       <string>Next     </string>
+      </property>
+     </widget>
+     <zorder>label</zorder>
+     <zorder>miniLogoPicIC</zorder>
+     <zorder>label_2</zorder>
+     <zorder>ipIC</zorder>
+     <zorder>tipLabelIC</zorder>
+     <zorder>cancelBtnIC</zorder>
+     <zorder>okBtnIC</zorder>
+     <zorder>cancelPicIC</zorder>
+     <zorder>okPicIC</zorder>
+    </widget>
+    <widget class="QWidget" name="ipReject">
+     <widget class="QLabel" name="ipRejectLogo">
+      <property name="geometry">
+       <rect>
+        <x>342</x>
+        <y>50</y>
+        <width>100</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ipRejectMsg">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>186</y>
+        <width>702</width>
+        <height>97</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#E24183;</string>
+      </property>
+      <property name="text">
+       <string>
+Unable to find a valid IP address, please check the physical network card and network configuration！</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ipRejectBtn">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>612</x>
+        <y>414</y>
+        <width>156</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;color:black;</string>
+      </property>
+      <property name="text">
+       <string>Completed</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pathSelect">
+     <widget class="QLabel" name="miniLogoPicPS">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>132</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>94</y>
+        <width>721</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>15</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Setup will install SIMPL into the following folder :</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>160</y>
+        <width>721</width>
+        <height>58</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Click Next to continue. If you want to select a different folder, click Browse.</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pathBrowse">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>270</y>
+        <width>120</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;background-color:#3bdbbf;border:0px;border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="filePath">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>270</y>
+        <width>331</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">text-align:left;background-color:white;border:1px solid grey;border-radius: 5px;color:black;
+</string>
+      </property>
+      <property name="text">
+       <string>           /home/seyond_user/</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="fileIcon">
+      <property name="geometry">
+       <rect>
+        <x>46</x>
+        <y>281</y>
+        <width>20</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>330</y>
+        <width>711</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>At least 2.3 GB of available disk space is required.</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="okPicPS">
+      <property name="geometry">
+       <rect>
+        <x>745</x>
+        <y>410</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cancelBtnPS">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>397</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;</string>
+      </property>
+      <property name="text">
+       <string>Cancel    </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="okBtnPS">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>397</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;</string>
+      </property>
+      <property name="text">
+       <string>Next   </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cancelPicPS">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>410</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>552</x>
+        <y>280</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Using GPU</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QCheckBox" name="use_gpu_checkbox">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="tristate">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <zorder>layoutWidget</zorder>
+     <zorder>miniLogoPicPS</zorder>
+     <zorder>label_7</zorder>
+     <zorder>label_8</zorder>
+     <zorder>pathBrowse</zorder>
+     <zorder>filePath</zorder>
+     <zorder>label_10</zorder>
+     <zorder>cancelBtnPS</zorder>
+     <zorder>okBtnPS</zorder>
+     <zorder>okPicPS</zorder>
+     <zorder>cancelPicPS</zorder>
+     <zorder>fileIcon</zorder>
+    </widget>
+    <widget class="QWidget" name="installing">
+     <widget class="QLabel" name="processBarNum">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>696</x>
+        <y>360</y>
+        <width>71</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="finishBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>646</x>
+        <y>404</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;</string>
+      </property>
+      <property name="text">
+       <string>OK</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="installDetail">
+      <property name="geometry">
+       <rect>
+        <x>26</x>
+        <y>417</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">            QPushButton {
+                border: none;
+                background: transparent;
+                text-align: left;
+                color:#2C64D0;
+            }
+            QPushButton:hover {
+                background: transparent;
+            }
+            QPushButton:pressed {
+                background: transparent;
+            }</string>
+      </property>
+      <property name="text">
+       <string>Installation details </string>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="installMsg">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>26</x>
+        <y>462</y>
+        <width>740</width>
+        <height>422</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextBrowser {
+                background-color: #f0f0f0;
+                border: 1px solid #c7c7c7;
+}
+QScrollBar:horizontal {
+        background: #f0f0f0;
+ 
+    }
+QScrollBar:vertical {
+        background: #f0f0f0;
+    }
+QScrollBar::handle:horizontal {
+        background: #e1e1e0; 
+        min-height: 10px;
+}
+QScrollBar::handle:vertical {
+        background: #e1e1e0; 
+        min-height: 10px;
+}
+
+    QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+        border-width: 0;
+        background: transparent;
+    }
+    QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+        border-width: 0;
+        background: transparent;
+    }
+
+    QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+        border-width: 0;
+        background: transparent;
+        height: 0px; 
+    }
+    QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+        border-width: 0;
+        background: transparent;
+        height: 0px; 
+    }
+</string>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QTextEdit::NoWrap</enum>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="arrowPic">
+      <property name="geometry">
+       <rect>
+        <x>187</x>
+        <y>420</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bgPic">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>65</y>
+        <width>736</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statusMsg">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>360</y>
+        <width>241</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Installing</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="logoPic">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>18</y>
+        <width>132</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>logo</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="errorMsg">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>360</y>
+        <width>401</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>330</y>
+        <width>736</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">            QProgressBar {
+                border: 0px solid grey;
+                border-radius: 5px;
+                text-align: center;
+                background-color: #e1e1e0;
+            }
+            QProgressBar::chunk {
+                background-color: #3bdbbf;
+                width: 10px;
+            }</string>
+      </property>
+      <property name="value">
+       <number>40</number>
+      </property>
+      <property name="textVisible">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="textDirection">
+       <enum>QProgressBar::TopToBottom</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="titleMsg">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>10</y>
+        <width>354</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Virtual_Loop_3.0.1_XP(CUDA 11)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="downloadBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>800</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>10</pointsize>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #c4c4c4;border-radius: 5px;background-color:white;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ipChecking">
+     <widget class="QLabel" name="checkingIPLabel">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>160</y>
+        <width>551</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Checking the physical network devices and IP address, this may take a few seconds ......</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ssdChecking">
+     <widget class="QLabel" name="checkingDiskLabel">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>150</y>
+        <width>551</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Checking the disk, this may take a few seconds ......</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
